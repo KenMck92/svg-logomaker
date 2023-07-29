@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const  = require('./lib/shapes.js');
 const { Circle, Triangle, Square } = require('./lib/shapes');
 
 class Svg {
@@ -55,12 +54,11 @@ function questions() {
                 console.log('TOO many characters, has to be 3 characters.');
                 questions();
             } else {
-                writeToFile('logo.svg', svgString);
+                writeToFile('logo.svg', stringSvg);
             }
         })
 };
-
-    let svgString = "";
+let stringSvg = "";
 
 function generateSVG(data) {
     let shapeOption;
@@ -80,7 +78,7 @@ function generateSVG(data) {
     const svg = new Svg();
     svg.setTextElement(data.text, data.textColor);
     svg.setShapeElement(shapeOption)
-    svgString = svg.render()
+    stringSvg = svg.render()
 }
 
 function writeToFile(fileName, data) {
