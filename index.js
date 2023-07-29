@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shapes = require('./lib/shapes');
+// const  = require('./lib/shapes.js');
+const {Circle, Triangle, Square} = require('./lib/shapes.js');
 
 function questions() {
     inquirer
@@ -34,6 +35,12 @@ function questions() {
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-        err ? console.log(err) : console.log('Successfully created file name')
+        err ? console.log(err) : console.log('Generated logo.svg')
     );
 };
+
+function init() {
+    questions();
+}
+
+init();
