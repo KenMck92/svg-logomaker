@@ -8,3 +8,7 @@ Shapes.js:
 Created a class to implement the colors and to render and return the shapes with their dimension for sizes, shapes and colors. 
 
 ## Usage
+
+https://drive.google.com/file/d/1ht8J_uTP_RupdwfS6IM9cSRWVMv2Uv6f/view
+
+https://github.com/KenMck92/svg-logomaker

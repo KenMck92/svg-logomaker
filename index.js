@@ -1,7 +1,9 @@
+// Imported the inquirer, fs, and shapes.js files
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Triangle, Square } = require('./lib/shapes');
 
+// Created class that constructs text and shapes
 class Svg {
     constructor() {
         this.textElement = ''
@@ -21,7 +23,7 @@ class Svg {
 
 };
 
-
+// Created a function for prompt questions to be displayed when node is implemented
 function questions() {
     inquirer
         .prompt([
@@ -47,7 +49,7 @@ function questions() {
                 name: "shapeColor"
             },
         ])
-
+        // Created a function to create logo.svg file using writeToFIle
         .then((data) => {
             generateSVG(data)
             if (data.text.length > 3) {
